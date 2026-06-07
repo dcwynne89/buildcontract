@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Terms of Service — BuildContract</title>
+  <meta name="description" content="Terms of service for BuildContract, a free online contract and scope-of-work generator.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buildcontract.co/terms.html">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6010936774105671" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📝 BuildContract</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/api/docs">API Docs</a>
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+  <main style="max-width:720px;margin:3rem auto;padding:0 1.5rem;">
+    <h1 style="font-size:1.8rem;font-weight:800;color:var(--text-primary);margin-bottom:1rem;">Terms of Service</h1>
+    <p style="color:var(--text-secondary);margin-bottom:0.5rem;font-size:0.85rem;">Last updated: June 2026</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Terms of Use</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">By using BuildContract ("the Service"), you agree to these terms. If you do not agree, please do not use the Service.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Service Description</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildContract is a free online tool that generates PDF contracts and scope-of-work agreements from structured input. The Service is provided as a convenience tool. BuildContract does not provide legal advice, and generated contracts should be reviewed by a qualified attorney before execution for significant agreements.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">User Responsibilities</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">You are responsible for the accuracy and legality of the content you enter. Do not use the Service for fraudulent, illegal, or deceptive purposes. You are responsible for ensuring generated contracts comply with applicable laws in your jurisdiction. API users must not exceed reasonable usage limits or attempt to circumvent rate-limiting mechanisms.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Limitation of Liability</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildContract is provided "as is" without warranties of any kind, express or implied. We do not guarantee the legal enforceability of generated contracts. We are not liable for any damages arising from the use or inability to use the Service, including but not limited to direct, indirect, incidental, or consequential damages. The Service may experience downtime, errors, or interruptions.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Privacy</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">Your use of the Service is also governed by our <a href="/privacy.html" style="color:var(--accent);">Privacy Policy</a>.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Changes</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">We reserve the right to modify these terms at any time. Continued use of the Service after changes constitutes acceptance of the updated terms.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Contact</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;">For questions about these terms, contact us at <a href="mailto:buildpdf.help@gmail.com" style="color:var(--accent);">buildpdf.help@gmail.com</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 BuildContract · <a href="/api/docs">API Docs</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>

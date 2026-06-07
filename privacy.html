@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>Privacy Policy — BuildContract</title>
+  <meta name="description" content="Privacy policy for BuildContract, a free online contract and scope-of-work generator.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buildcontract.co/privacy.html">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6010936774105671" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📝 BuildContract</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/api/docs">API Docs</a>
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+  <main style="max-width:720px;margin:3rem auto;padding:0 1.5rem;">
+    <h1 style="font-size:1.8rem;font-weight:800;color:var(--text-primary);margin-bottom:1rem;">Privacy Policy</h1>
+    <p style="color:var(--text-secondary);margin-bottom:0.5rem;font-size:0.85rem;">Last updated: June 2026</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">What We Collect</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">When you use BuildContract without signing in, we do not collect or store any personal data. All contract data stays in your browser and is sent directly to the PDF generation endpoint. We do not store submitted contract data on our servers — PDFs are generated on the fly and returned immediately.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">How We Use Your Data</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">Data you enter into the contract form is used exclusively to generate your PDF contract. We do not sell, share, or analyze your contract data. API usage data (request counts, timestamps) may be logged for rate-limiting and abuse prevention.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Optional Account &amp; Data Storage</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">If you choose to sign in (via Google), your account is managed through Firebase Authentication. When signed in, you can save contracts to your account. Saved contract data is stored in Firebase Firestore and is only accessible by you. You can delete saved contracts at any time. Deleting your account removes all stored data.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Third-Party Services</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildContract uses the following third-party services:</p>
+    <ul style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;padding-left:1.5rem;">
+      <li><strong style="color:var(--text-primary);">Netlify</strong> — Hosting and serverless functions</li>
+      <li><strong style="color:var(--text-primary);">Google AdSense</strong> — Advertising (may set cookies for ad personalization)</li>
+      <li><strong style="color:var(--text-primary);">Firebase (Google)</strong> — Authentication and data storage (optional, only if you sign in)</li>
+    </ul>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Cookies</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:1rem;">BuildContract itself does not set cookies. Third-party services (AdSense, Firebase) may set cookies as described in their respective privacy policies. You can manage cookie preferences through your browser settings.</p>
+
+    <h2 style="font-size:1.1rem;font-weight:700;color:var(--text-primary);margin:2rem 0 0.75rem;">Contact</h2>
+    <p style="color:var(--text-secondary);line-height:1.8;">For privacy-related questions, contact us at <a href="mailto:buildpdf.help@gmail.com" style="color:var(--accent);">buildpdf.help@gmail.com</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 BuildContract · <a href="/api/docs">API Docs</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>

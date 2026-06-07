@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <title>BuildContract — Free Contract & Scope of Work Generator | Create PDF Contracts Online</title>
+  <meta name="description" content="Generate professional PDF contracts and scope-of-work agreements for free. Define parties, scope, payment terms, and download instantly. No signup required. Optionally sign in to save your work.">
+  <meta name="keywords" content="free contract generator, scope of work template, contractor agreement, freelance contract, PDF contract, contract maker online, free scope of work generator">
+  <meta name="author" content="BuildContract">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://buildcontract.co/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6010936774105671" crossorigin="anonymous"></script>
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="BuildContract">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="BuildContract — Free Contract & Scope of Work Generator">
+  <meta property="og:description" content="Generate professional PDF contracts and scope-of-work agreements for free. No signup required.">
+  <meta property="og:url" content="https://buildcontract.co/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://buildcontract.co/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BuildContract — Free Contract Generator">
+  <meta name="twitter:description" content="Create professional PDF contracts and scope-of-work agreements instantly. Free, no signup.">
+  <meta name="twitter:image" content="https://buildcontract.co/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BuildContract",
+    "url": "https://buildcontract.co",
+    "description": "Free online contract and scope-of-work generator. Create professional PDF contracts from structured data. No signup required.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Generate PDF contracts instantly",
+      "Live preview as you type",
+      "Dual signature blocks",
+      "Scope of work with numbered clauses",
+      "Payment terms and timeline",
+      "Dispute resolution clause",
+      "No signup required",
+      "REST API for developers"
+    ],
+    "creator": { "@type": "Organization", "name": "BuildContract", "url": "https://buildcontract.co" }
+  }
+  </script>
+  <script src="/build-ecosystem-bar.js" defer></script>
+  <script src="/build-ecosystem-auth.js" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">📝 BuildContract</a>
+    <div class="navbar-links" id="siteNav">
+      <a href="/api/docs">API Docs</a>
+      <a href="/about.html">About</a>
+    </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="hero-banner">
+    <h1>Handshake Deals Cost Money. Contracts Don't.</h1>
+    <p>A professional scope-of-work agreement takes 3 minutes here. Define the work, set payment terms, add signature blocks — and both sides know exactly what was agreed to.</p>
+  </section>
+
+  <main class="app-container">
+
+    <!-- ── FORM PANEL ── -->
+    <div class="form-panel" id="formPanel">
+
+      <!-- Your Info -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📋 Your Information</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromName">Company / Your Name *</label>
+              <input type="text" id="fromName" placeholder="Acme Contracting" required>
+            </div>
+            <div class="form-group">
+              <label for="fromEmail">Email</label>
+              <input type="email" id="fromEmail" placeholder="contracts@acme.com">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="fromStreet">Street Address</label>
+              <input type="text" id="fromStreet" placeholder="123 Main St">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromCity">City</label>
+              <input type="text" id="fromCity" placeholder="Austin">
+            </div>
+            <div class="form-group">
+              <label for="fromState">State</label>
+              <input type="text" id="fromState" placeholder="TX" maxlength="2">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fromPhone">Phone</label>
+              <input type="tel" id="fromPhone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="accentColor">Accent Color</label>
+              <div class="color-row">
+                <input type="color" id="accentColor" value="#6366f1">
+                <input type="text" id="accentColorHex" value="#6366f1" style="flex:1" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Info -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>👤 Client / Other Party</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="toName">Client Name *</label>
+              <input type="text" id="toName" placeholder="Jane Smith" required>
+            </div>
+            <div class="form-group">
+              <label for="toEmail">Client Email</label>
+              <input type="email" id="toEmail" placeholder="jane@client.com">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="toStreet">Street Address</label>
+              <input type="text" id="toStreet" placeholder="456 Oak Ave">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="toCity">City</label>
+              <input type="text" id="toCity" placeholder="Denver">
+            </div>
+            <div class="form-group">
+              <label for="toState">State / ZIP</label>
+              <input type="text" id="toState" placeholder="CO 80202">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contract Details -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📄 Contract Details</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contractNumber">Contract Number</label>
+              <input type="text" id="contractNumber" placeholder="CTR-001" value="CTR-001">
+            </div>
+            <div class="form-group">
+              <label for="contractDate">Contract Date</label>
+              <input type="date" id="contractDate">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectName">Project / Job Name</label>
+              <input type="text" id="projectName" placeholder="Kitchen Renovation">
+            </div>
+            <div class="form-group">
+              <label for="contractType">Contract Type</label>
+              <select id="contractType">
+                <option value="fixed_price">Fixed Price</option>
+                <option value="time_and_materials">Time & Materials</option>
+                <option value="retainer">Retainer</option>
+                <option value="milestone">Milestone-Based</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scope of Work -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📜 Scope of Work</h3></div>
+        <div id="clauseItems"></div>
+        <button type="button" class="btn-add-item" id="btnAddClause">+ Add Clause</button>
+      </div>
+
+      <!-- Payment Terms -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>💰 Payment Terms</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="totalValue">Contract Value</label>
+              <input type="number" id="totalValue" placeholder="0.00" min="0" step="0.01">
+            </div>
+            <div class="form-group">
+              <label for="currency">Currency Symbol</label>
+              <input type="text" id="currency" placeholder="$" value="$" maxlength="3">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="paymentSchedule">Payment Schedule</label>
+              <select id="paymentSchedule">
+                <option value="upon_completion">Upon Completion</option>
+                <option value="50_50">50/50 (Deposit + Final)</option>
+                <option value="net_15">Net 15</option>
+                <option value="net_30">Net 30</option>
+                <option value="milestone">Milestone-Based</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="depositPercent">Deposit %</label>
+              <input type="number" id="depositPercent" placeholder="0" value="0" min="0" max="100" step="1">
+            </div>
+          </div>
+          <div class="totals-display">
+            <div class="totals-row"><span>Contract Value</span><span id="dispValue">$0.00</span></div>
+            <div class="totals-row"><span>Deposit</span><span id="dispDeposit">$0.00</span></div>
+            <div class="totals-row total"><span>Balance Due</span><span id="dispBalance">$0.00</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📅 Timeline</h3></div>
+        <div class="form-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate">
+            </div>
+            <div class="form-group">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate">
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="form-group">
+              <label for="latePenalty">Late Penalty</label>
+              <input type="text" id="latePenalty" placeholder="$50/day past deadline">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Terms -->
+      <div class="form-section">
+        <div class="form-section-header"><h3>📝 Additional Terms</h3></div>
+        <div class="form-body">
+          <div class="form-group">
+            <label for="additionalTerms">Additional Terms</label>
+            <textarea id="additionalTerms" rows="3" placeholder="Any additional terms, conditions, or exclusions…"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="disputeResolution">Dispute Resolution</label>
+              <select id="disputeResolution">
+                <option value="none">None Specified</option>
+                <option value="mediation">Mediation</option>
+                <option value="arbitration">Binding Arbitration</option>
+                <option value="litigation">Litigation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="governingLaw">Governing Law</label>
+              <input type="text" id="governingLaw" placeholder="State of Texas">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:0.75rem;">
+        <button type="button" class="btn-download" id="btnDownload" style="flex:1;">⬇ Download Contract PDF</button>
+      </div>
+    </div>
+
+    <!-- ── PREVIEW PANEL ── -->
+    <div class="preview-panel" id="previewPanel">
+      <div class="preview-header">
+        <h3>📄 Live Preview</h3>
+        <span class="preview-badge">Updates as you type</span>
+      </div>
+      <div class="preview-body" id="previewBody"></div>
+    </div>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- ── SEO Content ── -->
+  <section style="max-width:860px;margin:3rem auto;padding:0 1.5rem 1rem;">
+    <h2 style="font-size:1.3rem;font-weight:700;color:var(--text-primary);margin-bottom:1.5rem;border-bottom:1px solid var(--border);padding-bottom:0.5rem;">Why Use BuildContract?</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">⚖️</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Legally Structured</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Every contract includes scope, payment terms, timeline, and signature blocks — the elements that make an agreement enforceable.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">✍️</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Dual Signature Blocks</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Both parties sign. No verbal agreements, no he-said-she-said. A signed contract protects everyone.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">🔗</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Fits Your Workflow</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Start with a quote in <a href="https://buildquotes.co" style="color:var(--accent);">BuildQuotes</a>, formalize here, invoice in <a href="https://buildinvoice.co" style="color:var(--accent);">BuildInvoice</a>.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+        <div style="font-size:1.5rem;margin-bottom:0.5rem;">📱</div>
+        <h3 style="color:var(--text-primary);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Works on Any Device</h3>
+        <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;">Fill it out on your phone at the job site, download the PDF right there. No desktop required.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pro Tips ── -->
+  <section style="max-width:900px;margin:0 auto;padding:2.5rem 2rem 0;">
+    <h2 style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:1.25rem;">📌 What Makes a Contract Actually Protect You</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Always define what's NOT included</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">Scope creep starts when exclusions aren't documented. If it's not in the scope, say so explicitly. "This contract does not cover…" is the most powerful sentence in construction.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Payment terms should match project risk</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">50/50 for new clients, Net 30 for established ones. Don't start work with zero deposit on a first job — that's not trust, it's risk.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Include a change order clause</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">When scope changes mid-project, you need a process. Use <a href="https://buildchangeorder.co" style="color:var(--accent);">BuildChangeOrder</a> for formal scope changes that both sides approve.</p>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.25rem;">
+        <p style="font-size:0.82rem;font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;">Both parties need a signed copy</p>
+        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.6;">A contract only one side signed is a proposal. Both signatures are what make it binding. Download two copies and make sure both get signed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div style="max-width:860px;margin:0 auto 1.25rem;padding:0 1.5rem;">
+      <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:0.6rem;">Also from the Build ecosystem</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+        <a href="https://buildpdf.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">📄 <strong style="color:var(--text-primary);">BuildPDF</strong> — Free file-to-PDF converter</a>
+        <a href="https://buildinvoice.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">⚡ <strong style="color:var(--text-primary);">BuildInvoice</strong> — Free PDF invoice generator</a>
+        <a href="https://buildquotes.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">💼 <strong style="color:var(--text-primary);">BuildQuotes</strong> — Free quote & estimate generator</a>
+        <a href="https://buildchangeorder.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">📋 <strong style="color:var(--text-primary);">BuildChangeOrder</strong> — Free change order generator</a>
+        <a href="https://buildcertificates.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;padding:0.35rem 0.85rem;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;font-size:0.8rem;color:var(--text-secondary);text-decoration:none;">🏅 <strong style="color:var(--text-primary);">BuildCertificates</strong> — Free certificate generator</a>
+      </div>
+    </div>
+    <p>© 2026 BuildContract · <a href="/api/docs">API Docs</a> · <a href="/about.html">About</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  </footer>
+
+  <script src="contract-app.js"></script>
+  <script src="contract-save-integration.js" defer></script>
+<script>
+    const navToggle = document.getElementById('navToggle');
+    const siteNav = document.getElementById('siteNav');
+    const headerInner = navToggle ? navToggle.closest('.navbar') : null;
+    function closeNav() {
+      siteNav.classList.remove('open'); navToggle.classList.remove('open');
+      document.body.style.overflow = '';
+      const btn = siteNav.querySelector('.nav-close'); if (btn) btn.remove();
+      setTimeout(() => headerInner.appendChild(siteNav), 300);
+    }
+    if (navToggle && siteNav && headerInner) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = siteNav.classList.contains('open');
+        if (!isOpen) {
+          document.body.appendChild(siteNav);
+          const closeBtn = document.createElement('button');
+          closeBtn.className = 'nav-close';
+          closeBtn.setAttribute('aria-label', 'Close menu');
+          closeBtn.innerHTML = '&#x2715;';
+          closeBtn.addEventListener('click', closeNav);
+          siteNav.prepend(closeBtn);
+          requestAnimationFrame(() => { siteNav.classList.add('open'); navToggle.classList.add('open'); });
+          document.body.style.overflow = 'hidden';
+        } else { closeNav(); }
+      });
+      siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+    }
+  </script>
+</body>
+</html>
